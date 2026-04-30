@@ -22,7 +22,7 @@ def download_file_api (url : str, filename : str):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('-p', '--project', help="Project ID")
-    parser.add_argument('-s', '--slice', help="Slice trajectory (start:end:stride) eg: 1:100:1")
+    parser.add_argument('-s', '--slice', help="Slice trajectory (start:end:stride) eg: 1:100:1", default="")
     args = parser.parse_args()
     
     specific_project_url = API_BASE_URL + f'/projects/{args.project}'
